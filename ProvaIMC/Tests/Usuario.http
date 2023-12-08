@@ -1,4 +1,4 @@
-@base_url = https://localhost:7015/api/usuario
+@base_url = https://localhost:7015/usuario
 
 ### Listar Usuarios ###
 GET {{base_url}}/listar
@@ -7,5 +7,6 @@ GET {{base_url}}/listar
 POST {{base_url}}/cadastrar
 Content-Type: application:json
 {
-    "nome": "Pedro"
+    "Nome": "nome",
+    "Nascimento": "data"
 }
