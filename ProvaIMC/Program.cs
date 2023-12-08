@@ -1,6 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using ProvaIMC.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<AppDataContext>(options => options.UseSqlite("DataSource=Ygor_Espada.db;Cache=shared"));
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
