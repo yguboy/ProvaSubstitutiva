@@ -1,13 +1,13 @@
-@base_url = https://localhost:7268/usuario/cadastrar
+@base_url = https://localhost:7268/usuario
 
 ### Listar Usuarios ###
 GET {{base_url}}/listar
 
 ### Criar Usuario ###
 POST {{base_url}}/cadastrar
-Content-Type: application:json
+Content-Type: application/json
 
 {
-    "Nome": "nome",
-    "Nascimento": "data"
+    "Nome": "Maria",
+    "Nascimento": "20/08/2004"
 }
