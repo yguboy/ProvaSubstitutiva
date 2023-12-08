@@ -1,0 +1,7 @@
+@base_url = https://localhost:7015/api/usuario
+
+### Listar Usuarios ###
+GET {{base_url}}/listar
+
+### Criar Usuario ###
+POST {{base_url}}/cadastrar 
