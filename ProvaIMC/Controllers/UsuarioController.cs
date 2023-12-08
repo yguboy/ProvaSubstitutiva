@@ -14,7 +14,7 @@ public class UsuarioController : ControllerBase
         _context = context;
     }
 [HttpGet]
-[Route("api/controller/listar")]
+[Route("listar")]
 public IActionResult Listar()
 {
     try
@@ -34,9 +34,14 @@ public IActionResult Cadastrar ([FromBody] Usuario usuario)
 {
     try 
         {
-            _context.Add(usuario);
+            Usuario usuarioNovo = new(){
+                Nome = usuario.Nome,
+                Nascimento = usuario.Nascimento
+            };
+
+            _context.Add(usuarioNovo);
             _context.SaveChanges();
-            return Created("", usuario);
+            return Created("", usuarioNovo);
         }
         catch (Exception e)
         {
