@@ -4,4 +4,8 @@
 GET {{base_url}}/listar
 
 ### Criar Usuario ###
-POST {{base_url}}/cadastrar 
+POST {{base_url}}/cadastrar
+Content-Type: application:json
+{
+    "nome": "Pedro"
+}

@@ -5,7 +5,7 @@ using ProvaIMC.Data;
 using ProvaIMC.Models;
 
 [ApiController]
-[Route("[controller]")]
+[Route("usuario")]
 public class UsuarioController : ControllerBase
 {
     private readonly AppDataContext _context;
@@ -28,9 +28,8 @@ public IActionResult Listar()
     }
 }
 
-
 [HttpPost]
-[Route("api/controller/cadastrar")]
+[Route("cadastrar")]
 public IActionResult Cadastrar ([FromBody] Usuario usuario) 
 {
     try 
